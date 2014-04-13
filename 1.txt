@@ -1,0 +1,9 @@
+﻿var http = require("http");
+console.log(23);
+http.createServer(function(request, response) {
+console.log(123);
+response.writeHead(200, {"Content-Type": "text/html"});
+response.write("<html><body><input type = 'button' onclick = 'alert();' value = 'jme'> </input></body></html> ");
+
+response.end();
+}).listen(8888);
